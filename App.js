@@ -37,6 +37,14 @@ export default function App() {
       return;
     }
     
+    const novoLembrete = {
+      id: Date.now().toString(),
+      texto: textoLembrete
+    };
+
+    const listaAtualizada = [... lembretes, novoLembrete];
+    setLembretes(listaAtualizada);
+    
   }
 
   return (
