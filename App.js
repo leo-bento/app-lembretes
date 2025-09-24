@@ -80,7 +80,7 @@ export default function App() {
           <View>
             <View style={styles.botoesMenu}>
               {/* Botão para ir para a tela de formulário */}
-              <TouchableOpacity style={styles.addButon} onPress={() => setView('formulario')}>
+              <TouchableOpacity style={styles.addButton} onPress={() => setView('formulario')}>
                 <Text style={styles.buttonText}>Adicionar Novo Lembrete</Text>
               </TouchableOpacity>
 
@@ -144,8 +144,110 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#f5f5f5',
+  },
+  scrollContainer: {
+    padding: 16,
+  },
+  header: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginVertical: 20,
+    color: '#34495e',
+  },
+  // Menu da Lista
+  botoesMenu: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 20,
+  },
+  addButton: {
+    backgroundColor: '#007bff',
+    padding: 12,
+    borderRadius: 5,
+    flex: 1,
+    marginRight: 5,
     alignItems: 'center',
-    justifyContent: 'center',
+  },
+  loadButton: {
+    backgroundColor: '#5bc0de',
+    padding: 12,
+    borderRadius: 5,
+    flex: 1,
+    marginLeft: 5,
+    alignItems: 'center',
+  },
+  // Formulário
+  formContainer: {
+    backgroundColor: '#fff',
+    padding: 20,
+    borderRadius: 10,
+  },
+  formHeader: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginBottom: 15,
+    textAlign: 'center',
+  },
+  input: {
+    borderColor: '#bdc3c7',
+    borderWidth: 1,
+    borderRadius: 5,
+    padding: 10,
+    marginBottom: 15,
+    fontSize: 16,
+    height: 100,
+    textAlignVertical: 'top',
+  },
+  formActions: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  },
+  formButton: {
+    flex: 1,
+    padding: 12,
+    borderRadius: 5,
+    marginHorizontal: 5,
+  },
+  cancelButton: {
+    backgroundColor: '#95a5a6',
+  },
+  saveButton: {
+    backgroundColor: '#27ae60',
+  },
+  // Item da Lista
+  lembreteItem: {
+    backgroundColor: '#fff',
+    padding: 20,
+    marginVertical: 8,
+    borderRadius: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  lembreteTextContainer: {
+    flex: 1,
+    marginRight: 15,
+  },
+  lembreteTitle: {
+    fontSize: 18,
+  },
+  deleteButton: {
+    backgroundColor: '#e74c3c',
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderRadius: 5,
+  },
+  buttonText: {
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  emptyText: {
+    textAlign: 'center',
+    marginTop: 30,
+    fontSize: 18,
+    color: '#95a5a6',
   },
 });
